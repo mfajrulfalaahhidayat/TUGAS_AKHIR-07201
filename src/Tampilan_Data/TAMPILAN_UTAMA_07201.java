@@ -69,6 +69,10 @@ public class TAMPILAN_UTAMA_07201
         tampilkandata.setBounds(465, 310, 150, 50);
         tampilkandata.setBackground(Color.YELLOW);
         tampilan.add(tampilkandata);
+        
+        tampilan.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        tampilan.setVisible(true);
+        tampilan.setLocationRelativeTo(null);
     
      checkin.addActionListener(new ActionListener(){
             @Override
