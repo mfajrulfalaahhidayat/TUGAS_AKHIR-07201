@@ -18,7 +18,7 @@ import javax.swing.*;
 public class TAMPILAN_UTAMA_07201 
 {
     JFrame tampilan = new JFrame();
-    JLabel akun,pemesanan,judul;
+    JLabel akun,pemesanan,judul,judul2,judul3;
     JRadioButton pemilik,penyewa;
     JTextField namapenyewa,noktppesan,tanggallahirpenyewa,tanggalcheckinpenyewa,tanggalcheckoutpenyewa,daerahasalpenyewa,statuspenyewa,notelppenyewa;
     JButton loginpemilik,datacheckin,checkin,tampilkandata,verifikasi;
@@ -26,44 +26,49 @@ public class TAMPILAN_UTAMA_07201
     
     public TAMPILAN_UTAMA_07201()
     {
-        tampilan.setSize(700, 630);
+        tampilan.setSize(730, 630);
         tampilan.setLayout(null);
         tampilan.getContentPane().setBackground(Color.WHITE);
         
-        judul = new JLabel("PENYEWAAN KAMAR KOS MBAH TOYIB");
-        judul.setBounds(40, 10, 600, 50);
+        judul = new JLabel("SEWA KAMAR KOS MBAH TOYIB");
+        judul.setBounds(100, 10, 600, 50);
         judul.setFont(new Font("Times New Roman",Font.BOLD,30));
         tampilan.add(judul);
         
+        judul2 = new JLabel("REGISTRASI");
+        judul2.setBounds(465, 120, 600, 50);
+        judul2.setFont(new Font("Times New Roman",Font.BOLD,23));
+        tampilan.add(judul2);
+        
+        judul3 = new JLabel("KETERANGAN");
+        judul3.setBounds(80, 120, 600, 50);
+        judul3.setFont(new Font("Times New Roman",Font.BOLD,23));
+        tampilan.add(judul3);
+        
         loginpemilik = new JButton("LOGIN PEMILIK");
-        loginpemilik.setBounds(256, 100, 150, 40);
+        loginpemilik.setBounds(380, 170, 150, 40);
         loginpemilik.setBackground(Color.YELLOW);
         tampilan.add(loginpemilik);
         
         datacheckin = new JButton ("LOGIN PENYEWA");
-        datacheckin.setBounds(256, 170, 150, 40);
+        datacheckin.setBounds(550, 170, 150, 40);
         datacheckin.setBackground(Color.YELLOW);
         tampilan.add(datacheckin);
         
         checkin = new JButton("CHECKIN");
-        checkin.setBounds(256, 245, 150, 40);
+        checkin.setBounds(380, 240, 150, 40);
         checkin.setBackground(Color.YELLOW);
         tampilan.add(checkin);
         
         verifikasi = new JButton("VERIFIKASI");
-        verifikasi.setBounds(256, 325, 150, 40);
+        verifikasi.setBounds(550, 240, 150, 40);
         verifikasi.setBackground(Color.YELLOW);
         tampilan.add(verifikasi);
         
         tampilkandata = new JButton ("TAMPILKAN DATA");
-        tampilkandata.setBounds(256, 400, 150, 50);
+        tampilkandata.setBounds(465, 310, 150, 50);
         tampilkandata.setBackground(Color.YELLOW);
         tampilan.add(tampilkandata);
-        
-        tampilan.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        tampilan.setVisible(true);
-        tampilan.setLocationRelativeTo(null);
-    
     
      checkin.addActionListener(new ActionListener(){
             @Override
