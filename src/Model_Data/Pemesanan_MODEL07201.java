@@ -92,6 +92,11 @@ public class Pemesanan_MODEL07201 implements Model_Data_Interfaces
         PemesananEntityArrayList.set(indexpesanan, Pemesanan_ENTITY07201);
     }
     
+    public void deletePemesanan_ENTITY07201(int index)
+    {
+        PemesananEntityArrayList.remove(index);
+    }
+    
     public ArrayList<Pemesanan_ENTITY07201> semuadatapemesanan()
     {
         return  PemesananEntityArrayList;

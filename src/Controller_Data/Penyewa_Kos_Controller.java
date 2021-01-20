@@ -64,6 +64,16 @@ public class Penyewa_Kos_Controller implements Controller_Data_Interfaces07201
         return Kumpulan_Pusat_Data_Model_CONTROLLER07201.pemesananModel.showdatapenyewakamar(indexlogin);
     }
       
+      public void deletedatapenyewa(int index)
+      {
+          Kumpulan_Pusat_Data_Model_CONTROLLER07201.pemesananModel.deletePemesanan_ENTITY07201(index);
+      }
+      
+      public void deletedatakamarpenyewa(int index)
+      {
+          Kumpulan_Pusat_Data_Model_CONTROLLER07201.penyewaModel.deletePemesanan_ENTITY07201(index);
+      }
+      
       public DefaultTableModel datapenyewa(){
         DefaultTableModel dtmpemesanan = new DefaultTableModel();
         Object[] kolom ={"Nama","Noktp","Tanggal Lahir","Daerah Asal","No.Telp","Status","Kamar","Jenis Kamar","Tanggal Checkin","Tanggal Cehckout","Verifikasi"};

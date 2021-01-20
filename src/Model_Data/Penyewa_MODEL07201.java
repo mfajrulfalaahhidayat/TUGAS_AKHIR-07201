@@ -42,4 +42,10 @@ public class Penyewa_MODEL07201 implements Model_CekData_Interfaces
  {
      return Penyewa_ENTITY07201ArrayList.get(indexpesanan);
  }
+ 
+ public void deletePemesanan_ENTITY07201(int index)
+    {
+        Penyewa_ENTITY07201ArrayList.remove(index);
+    }
+ 
 }
