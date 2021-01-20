@@ -7,6 +7,7 @@ package Model_Data;
 
 import Entity_Data.Penyewa_ENTITY07201;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -43,9 +44,9 @@ public class Penyewa_MODEL07201 implements Model_CekData_Interfaces
      return Penyewa_ENTITY07201ArrayList.get(indexpesanan);
  }
  
- public void deletePemesanan_ENTITY07201(int index)
+ public Penyewa_ENTITY07201 deletePemesanan_ENTITY07201(int index)
     {
-        Penyewa_ENTITY07201ArrayList.remove(index);
+        return Penyewa_ENTITY07201ArrayList.remove(index);
     }
  
 }

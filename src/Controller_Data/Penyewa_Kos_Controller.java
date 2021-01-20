@@ -5,6 +5,8 @@
  */
 package Controller_Data;
 
+import Entity_Data.Jenis_Kamar_ENTITY07201;
+import Entity_Data.Kamar_ENITITY07201;
 import Entity_Data.Penyewa_ENTITY07201;
 import Entity_Data.Pemesanan_ENTITY07201;
 import java.util.ArrayList;
@@ -64,19 +66,19 @@ public class Penyewa_Kos_Controller implements Controller_Data_Interfaces07201
         return Kumpulan_Pusat_Data_Model_CONTROLLER07201.pemesananModel.showdatapenyewakamar(indexlogin);
     }
       
-      public void deletedatapenyewa(int index)
+      public Pemesanan_ENTITY07201 deletedatapenyewa()
       {
-          Kumpulan_Pusat_Data_Model_CONTROLLER07201.pemesananModel.deletePemesanan_ENTITY07201(index);
+        return Kumpulan_Pusat_Data_Model_CONTROLLER07201.pemesananModel.deletePemesanan_ENTITY07201(indexlogin);
       }
       
-      public void deletedatakamarpenyewa(int index)
+      public Penyewa_ENTITY07201 deletedatakamarpenyewa()
       {
-          Kumpulan_Pusat_Data_Model_CONTROLLER07201.penyewaModel.deletePemesanan_ENTITY07201(index);
+         return Kumpulan_Pusat_Data_Model_CONTROLLER07201.penyewaModel.deletePemesanan_ENTITY07201(indexlogin);
       }
       
       public DefaultTableModel datapenyewa(){
         DefaultTableModel dtmpemesanan = new DefaultTableModel();
-        Object[] kolom ={"Nama","Noktp","Tanggal Lahir","Daerah Asal","No.Telp","Status","Kamar","Jenis Kamar","Tanggal Checkin","Tanggal Cehckout","Verifikasi"};
+        Object[] kolom ={"Nama","Noktp","Tanggal Lahir","Daerah Asal","No.Telp","Status","Kamar","Jenis","Checkin","Cehckout","Verifikasi"};
         dtmpemesanan.setColumnIdentifiers(kolom);
         int size = Kumpulan_Pusat_Data_Model_CONTROLLER07201.pemesananModel.semuadatapemesanan().size();
         String verif = null;
@@ -93,8 +95,8 @@ public class Penyewa_Kos_Controller implements Controller_Data_Interfaces07201
             data[3] = Kumpulan_Pusat_Data_Model_CONTROLLER07201.pemesananModel.semuadatapemesanan().get(i).getpenyewa().getdaerahasal();
             data[4] = Kumpulan_Pusat_Data_Model_CONTROLLER07201.pemesananModel.semuadatapemesanan().get(i).getpenyewa().getnotelp();
             data[5] = Kumpulan_Pusat_Data_Model_CONTROLLER07201.pemesananModel.semuadatapemesanan().get(i).getpenyewa().getstatus();
-            data[6] = Kumpulan_Pusat_Data_Model_CONTROLLER07201.pemesananModel.semuadatapemesanan().get(i).getindexKamar();
-            data[7] = Kumpulan_Pusat_Data_Model_CONTROLLER07201.pemesananModel.semuadatapemesanan().get(i).getindexJenisKamar();
+            data[6] = Kamar_ENITITY07201.kamar[Kumpulan_Pusat_Data_Model_CONTROLLER07201.pemesananModel.semuadatapemesanan().get(i).getindexKamar()];
+            data[7] = Jenis_Kamar_ENTITY07201.jeniskamar[Kumpulan_Pusat_Data_Model_CONTROLLER07201.pemesananModel.semuadatapemesanan().get(i).getindexJenisKamar()];
             data[8] = Kumpulan_Pusat_Data_Model_CONTROLLER07201.pemesananModel.semuadatapemesanan().get(i).getpenyewa().gettanggalcheckin();
             data[9] = Kumpulan_Pusat_Data_Model_CONTROLLER07201.pemesananModel.semuadatapemesanan().get(i).getpenyewa().gettanggalcheckout();
             data[10] = verif;
@@ -102,8 +104,10 @@ public class Penyewa_Kos_Controller implements Controller_Data_Interfaces07201
         }
         return dtmpemesanan;
     }
-
-    
-
+      
+       public Penyewa_ENTITY07201 pembayaran()
+      {
+         return Kumpulan_Pusat_Data_Model_CONTROLLER07201.penyewaModel.deletePemesanan_ENTITY07201(indexlogin);
+      }
       }
 

@@ -76,7 +76,7 @@ public class Pemesanan_MODEL07201 implements Model_Data_Interfaces
                     loop = i;
                     break;
                 }else{
-                    loop = -2;
+                    loop = -2;//data tidak ketemu
                 }
             }
         }return loop;
@@ -87,14 +87,14 @@ public class Pemesanan_MODEL07201 implements Model_Data_Interfaces
         return PemesananEntityArrayList.get(index);
     }
     
-    public void updateIsVerified(int indexpesanan, Pemesanan_ENTITY07201 Pemesanan_ENTITY07201)
+    public void updateIsVerified(int indexpesanan,Pemesanan_ENTITY07201 Pemesanan_ENTITY07201)
     {
         PemesananEntityArrayList.set(indexpesanan, Pemesanan_ENTITY07201);
     }
     
-    public void deletePemesanan_ENTITY07201(int index)
+    public Pemesanan_ENTITY07201 deletePemesanan_ENTITY07201(int index)
     {
-        PemesananEntityArrayList.remove(index);
+       return PemesananEntityArrayList.remove(index);
     }
     
     public ArrayList<Pemesanan_ENTITY07201> semuadatapemesanan()

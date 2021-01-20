@@ -47,16 +47,6 @@ public class Data_Penyewa_Kos_GUI07201 {
         tabeldata.setModel(penyewa.datapenyewa());
         pemilik.add(scrolldata);
         
-        tulisanketerangan = new JLabel("NB : No.kamar => 0. DEPAN  1. TENGAH  2. BELAKANG");
-        tulisanketerangan.setBounds(50, 300, 500, 30);
-        tulisanketerangan.setFont(new Font("Timer New Roman",Font.BOLD,14));
-        pemilik.add(tulisanketerangan);
-        
-        tulisanketerangan = new JLabel("NB : No.Jenis kamar => 0. BESAR  1. KECIL");
-        tulisanketerangan.setBounds(50, 330, 500, 30);
-        tulisanketerangan.setFont(new Font("Timer New Roman",Font.BOLD,14));
-        pemilik.add(tulisanketerangan);
-        
         back = new JButton("back");
         back.setBounds(50, 450, 100, 30);
         back.setBackground(Color.red);

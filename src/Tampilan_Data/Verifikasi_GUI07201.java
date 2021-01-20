@@ -41,16 +41,6 @@ public class Verifikasi_GUI07201 {
         tabeldata.setModel(penyewa.datapenyewa());
         verifikasi.add(scrolldata);
         
-        tulisanketerangan = new JLabel("NB : No.kamar => 0. DEPAN  1. TENGAH  2. BELAKANG");
-        tulisanketerangan.setBounds(50, 300, 500, 30);
-        tulisanketerangan.setFont(new Font("Timer New Roman",Font.BOLD,14));
-        verifikasi.add(tulisanketerangan);
-        
-        tulisanketerangan = new JLabel("NB : No.Jenis kamar => 0. BESAR  1. KECIL");
-        tulisanketerangan.setBounds(50, 330, 500, 30);
-        tulisanketerangan.setFont(new Font("Timer New Roman",Font.BOLD,14));
-        verifikasi.add(tulisanketerangan);
-        
         namalabel = new JLabel("Nama");
         namalabel.setBounds(50, 360, 100, 30);
         verifikasi.add(namalabel);
@@ -91,9 +81,9 @@ public class Verifikasi_GUI07201 {
             public void actionPerformed(ActionEvent ae){
                 String nama = namapenyewa.getText();
                 String noktp = noktppenyewa.getText();
-                int index = Kumpulan_Pusat_Data_Model_CONTROLLER07201.pemesananModel.cekData(nama, noktp);
+                int indexkamar = Kumpulan_Pusat_Data_Model_CONTROLLER07201.pemesananModel.cekData(nama, noktp);
                 int indexjeniskamar = Kumpulan_Pusat_Data_Model_CONTROLLER07201.pemesananModel.cekData(nama, noktp);
-                Kumpulan_Semua_Object_Control_07201.pemilik.updateIsveified(index,indexjeniskamar,Kumpulan_Semua_Object_Control_07201.penyewa.showdatapenyewakamar().getindexJenisKamar(),Kumpulan_Semua_Object_Control_07201.penyewa.showdatapenyewakamar().getpenyewa());
+                Kumpulan_Semua_Object_Control_07201.pemilik.updateIsveified(indexkamar,indexjeniskamar,Kumpulan_Semua_Object_Control_07201.penyewa.showdatapenyewakamar().getindexJenisKamar(),Kumpulan_Semua_Object_Control_07201.penyewa.showdatapenyewakamar().getpenyewa());
                 tabeldata.setModel(penyewa.datapenyewa());
             }
         });

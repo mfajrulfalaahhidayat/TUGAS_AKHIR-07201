@@ -19,9 +19,8 @@ public class TAMPILAN_UTAMA_07201
 {
     JFrame tampilan = new JFrame();
     JLabel akun,pemesanan,judul,judul2,judul3;
-    JTextField namapenyewa,noktppesan,tanggallahirpenyewa,tanggalcheckinpenyewa,tanggalcheckoutpenyewa,daerahasalpenyewa,statuspenyewa,notelppenyewa;
-    JButton loginpemilik,datacheckin,checkin,tampilkandata,verifikasi,fasilitaskamar,aksesjalan,hargakamar,pembayaran,pelayanan;
-    JPasswordField noktpcek,noktppemesanan;
+    JButton loginpemilik,datacheckin,checkin,tampilkandata,verifikasi,keterangan,pembayaran;
+
     
     public TAMPILAN_UTAMA_07201()
     {
@@ -49,7 +48,7 @@ public class TAMPILAN_UTAMA_07201
         loginpemilik.setBackground(Color.YELLOW);
         tampilan.add(loginpemilik);
         
-        datacheckin = new JButton ("LOGIN PENYEWA");
+        datacheckin = new JButton ("LOGIN PILIH KAMAR");
         datacheckin.setBounds(550, 170, 150, 40);
         datacheckin.setBackground(Color.YELLOW);
         tampilan.add(datacheckin);
@@ -69,28 +68,13 @@ public class TAMPILAN_UTAMA_07201
         tampilkandata.setBackground(Color.YELLOW);
         tampilan.add(tampilkandata);
         
-        fasilitaskamar = new JButton ("FASILITAS KAMAR");
-        fasilitaskamar.setBounds(30, 170, 150, 40);
-        fasilitaskamar.setBackground(Color.YELLOW);
-        tampilan.add(fasilitaskamar);
-        
-        hargakamar = new JButton ("HARGA KAMAR");
-        hargakamar.setBounds(210, 170, 150, 40);
-        hargakamar.setBackground(Color.YELLOW);
-        tampilan.add(hargakamar);
-        
-        aksesjalan = new JButton ("AKSES JALAN KOS");
-        aksesjalan.setBounds(30, 240, 150, 40);
-        aksesjalan.setBackground(Color.YELLOW);
-        tampilan.add(aksesjalan);
-        
-        pelayanan = new JButton ("PELAYANAN");
-        pelayanan.setBounds(210, 240, 150, 40);
-        pelayanan.setBackground(Color.YELLOW);
-        tampilan.add(pelayanan);
+        keterangan = new JButton ("KETERANGAN");
+        keterangan.setBounds(125, 170, 150, 40);
+        keterangan.setBackground(Color.YELLOW);
+        tampilan.add(keterangan);
         
         pembayaran = new JButton ("PEMBAYARAN");
-        pembayaran.setBounds(100, 310, 150, 50);
+        pembayaran.setBounds(125, 240, 150, 40);
         pembayaran.setBackground(Color.YELLOW);
         tampilan.add(pembayaran);
         
@@ -147,6 +131,15 @@ public class TAMPILAN_UTAMA_07201
             @Override
             public void actionPerformed(ActionEvent ae){
                 Pembayaran_GUI07201 verifikasi = new Pembayaran_GUI07201();
+                tampilan.dispose();
+            }
+            
+     });
+      
+       keterangan.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent ae){
+                Keterangan_GUI07201 fasilitas = new  Keterangan_GUI07201();
                 tampilan.dispose();
             }
             

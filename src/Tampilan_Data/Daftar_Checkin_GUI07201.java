@@ -77,7 +77,7 @@ public class Daftar_Checkin_GUI07201 {
         }else if(cek==-2){
             JOptionPane.showMessageDialog(null,"Silahkan Memilih Kamar", "Information", JOptionPane.INFORMATION_MESSAGE);
         }else{
-            area.setText(datapraktikan());
+            area.setText(datapenyewa());
         }
         
 back.addActionListener(new ActionListener(){
@@ -94,13 +94,13 @@ pesan.addActionListener(new ActionListener(){
             int indexkamar = pilKamar.getSelectedIndex();
             int indexjeniskamar = pilJenisKamar.getSelectedIndex();
             Kumpulan_Semua_Object_Control_07201.penyewa.Pemesanankamar(indexkamar,indexjeniskamar, Kumpulan_Semua_Object_Control_07201.penyewa.getData(), false);
-            area.setText(datapraktikan());
+            area.setText(datapenyewa());
     }
 });
         
          
 }
-    String datapraktikan(){
+    String datapenyewa(){
         
         String cekverif;
         if( Kumpulan_Semua_Object_Control_07201.penyewa.showdatapenyewakamar().isverified()==false){
@@ -118,8 +118,7 @@ pesan.addActionListener(new ActionListener(){
                 +"Jenis Kamar = "+Jenis_Kamar_ENTITY07201.jeniskamar[Kumpulan_Semua_Object_Control_07201.penyewa.showdatapenyewakamar().getindexJenisKamar()]+"\n"
                 +"Tanggal Checkin = "+new SimpleDateFormat("dd-MM-yyyy").format(Kumpulan_Semua_Object_Control_07201.penyewa.showdatapenyewakamar().getpenyewa().gettanggalcheckin())+"\n"
                 +"Tanggal Checkout = "+new SimpleDateFormat("dd-MM-yyyy").format(Kumpulan_Semua_Object_Control_07201.penyewa.showdatapenyewakamar().getpenyewa().gettanggalcheckout())+"\n"
-                +"Verifikasi = "+cekverif;
-//                
+                +"Verifikasi = "+cekverif;               
         return text;
     }
 }

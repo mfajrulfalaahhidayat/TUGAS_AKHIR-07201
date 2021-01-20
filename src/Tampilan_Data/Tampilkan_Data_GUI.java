@@ -45,16 +45,6 @@ public class Tampilkan_Data_GUI {
         tabeldata.setModel(penyewa.datapenyewa());
         view_data.add(scrolldata);
         
-        tulisanketerangan = new JLabel("NB : No.kamar => 0. DEPAN  1. TENGAH  2. BELAKANG");
-        tulisanketerangan.setBounds(50, 300, 500, 30);
-        tulisanketerangan.setFont(new Font("Timer New Roman",Font.BOLD,14));
-        view_data.add(tulisanketerangan);
-        
-        tulisanketerangan = new JLabel("NB : No.Jenis kamar => 0. BESAR  1. KECIL");
-        tulisanketerangan.setBounds(50, 330, 500, 30);
-        tulisanketerangan.setFont(new Font("Timer New Roman",Font.BOLD,14));
-        view_data.add(tulisanketerangan);
-        
         back = new JButton("back");
         back.setBounds(50, 450, 100, 30);
         back.setBackground(Color.red);
